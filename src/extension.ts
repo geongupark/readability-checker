@@ -63,8 +63,8 @@ function getDiffLines(): Promise<string> {
 }
 
 function validateDiffLines(diffLines: string): void {
-	// stdout 예: ' 1 file changed, 1 insertions(+), 1 deletions(-)'
-	const match = diffLines.match(/(\d+) insertions?\(\+\), (\d+) deletions?\(-\)/);
+	// stdout 예: ' 1 file changed, 2 insertions(+), 1 deletion(-)'
+	const match = diffLines.match(/(\d+)\sinsertion|\s(\d+)\sdeletion/);
 	if (match) {
 		const insertions = parseInt(match[1]);
 		const deletions = parseInt(match[2]);
