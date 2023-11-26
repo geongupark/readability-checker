@@ -8,6 +8,7 @@ This extension checks the readability of your code base on `git diff`
 - **deletionLimit**: (default 200) Threshold value for the number of delete lines to measure readability
 
 ![Readability Checker in action](images/readability-checker.png)
+![Readability Checker setting](images/readability-checker-setting.png)
 
 ## Requirements
 
